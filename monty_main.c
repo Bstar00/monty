@@ -1,6 +1,6 @@
 #include "monty.h"
-#include <stdio.h>
 #define _GNU_SOURCE
+#include <stdio.h>
 #include <stdlib.h>
 
 bus_t bus = {NULL, NULL, NULL, 0};
@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
 	while (read_line > 0)
 	{
 		content = NULL;
-		read_line = getline(&content, &size, file);
+		(void)read_line = getline(&content, &size, file);
 		bus.content = content;
 		counter++;
 		if (read_line > 0)
