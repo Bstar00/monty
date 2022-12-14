@@ -9,7 +9,6 @@ bus_t bus = {NULL, NULL, NULL, 0};
 * main - function for monty code interpreter
 * @argc: argument count
 * @argv: argument value
-*
 * Return: 0 on success
 */
 int main(int argc, char *argv[])
@@ -36,7 +35,7 @@ int main(int argc, char *argv[])
 	while (read_line > 0)
 	{
 		content = NULL;
-		(void)read_line = getline(&content, &size, file);
+		read_line = getline(&content, &size, file);
 		bus.content = content;
 		counter++;
 		if (read_line > 0)
